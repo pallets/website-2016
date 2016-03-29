@@ -1,0 +1,13 @@
+{% extends "people-layout.html" %}
+{% block title %}{{ this.name }}{% endblock %}
+{% block people_body %}
+  <h1>{{ this.name }}</h1>
+  <dl>
+    <dt>Nickname:
+    <dd>{{ this.nickname }}
+    <dt>Location:
+    <dd>{{ this.location }}
+    <dt>Role:
+    <dd>{{ this.role }}
+  </dl>
+{% endblock %}

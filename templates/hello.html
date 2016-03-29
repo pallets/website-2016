@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="hello-box">
+    <h1>{{ this.title }}</h1>
+    <img src="logo-large.png" style="height: 250px">
+    {{ this.body }}
+    {% for project in site.query('/projects') %}
+      <div class=project>
+        <h3><a href="{{ project|url }}">{{ project.name }}</a></h3>
+        <div class=description>
+          {{ project.description }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

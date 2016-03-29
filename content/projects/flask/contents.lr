@@ -1,0 +1,38 @@
+_model: project
+---
+name: Flask
+---
+description:
+
+Flask is a microframework for Python based on Werkzeug, Jinja 2 and good
+intentions.
+---
+body:
+
+Flask is a Python web development framework based on the
+[Werkzeug](../werkzeug/), [Jinja](../jinja/), [MarkupSafe](../markupsafe/)
+and [itsdangerous](../itsdangerous/) pallets libraries.  It was originally
+created in 2010 and has since powered some of the largest websites on the
+internet.
+
+## Flask is Fun
+
+```python
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+```
+
+## And Easy to Setup
+
+```
+$ pip install Flask
+$ python hello.py
+ * Running on http://localhost:5000/
+```

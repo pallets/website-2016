@@ -1,0 +1,21 @@
+title: Resources
+---
+summary: List of all project resources.
+---
+body:
+
+To avoid the problem of not knowing where stuff lives and who is responsible
+for what, here you can find a list of known resources:
+
+## Sourcecode and Project Management
+
+All sourcecode and issue management is currently located on Github:
+
+* [Pallets on Github](https://github.com/pallets)
+* [Team Management on Github](https://github.com/orgs/pallets/teams)
+  (requires owner access)
+
+## Website Hosting
+
+The websites are hosted on "flow", a Hetzner server in Germany.  Currently the
+only people access to that server are [Armin](/people/mitsuhiko/).

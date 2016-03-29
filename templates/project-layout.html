@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% from "macros/navigation.html" import render_tree_nav %}
+{% block body %}
+  <div class="row">
+    <div class="col-sm-3">
+      {{ render_tree_nav('/projects', here=this) }}
+    </div>
+    <div class="col-sm-9">
+      {% block project_body %}{% endblock %}
+    </div>
+  </div>
+{% endblock %}

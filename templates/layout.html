@@ -1,0 +1,67 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ '/static/styles.css'|asseturl }}">
+<link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
+<title>{% block title %}Hello{% endblock %} | The Pallets Project</title>
+<body class="{% block bodyclass %}default{% endblock %}">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ '/'|url }}">The Pallets Project</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          {% for id, item in bag('menu').iteritems() %}
+            <li{% if this.is_child_of(item.path) %} class="active"{% endif
+              %}><a href="{{ item.path|url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="body-wrapper">
+    {% block outerbody %}
+    <div class="container">
+      {% block body %}{% endblock %}
+    </div>
+    {% endblock %}
+  </div>
+
+  {% block bottomsummary %}
+  <div class="bottomsummary">
+    <div class="container">
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block footer %}
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 icon-bar">
+          <a href="https://github.com/pallets/" title="Pallets on GitHub"
+            ><i class="fa fa-github"></i></a>
+        </div>
+        <div class="col-sm-8">
+          <a href="{{ '/license'|url }}">License &amp; Copyright</a> •
+          <a href="{{ '/contact'|url }}">Contact</a> •
+          Made with <i class="fa fa-fw fa-heart" title="Heart"><span hidden>Heart</span></i> all around the World
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endblock %}
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</body>

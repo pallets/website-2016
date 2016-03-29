@@ -1,0 +1,6 @@
+{% extends "project-layout.html" %}
+{% block title %}{{ this.name }}{% endblock %}
+{% block project_body %}
+  <h1>{{ this.name }}</h1>
+  {{ this.body }}
+{% endblock %}

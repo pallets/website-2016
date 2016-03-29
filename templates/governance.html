@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% from "macros/navigation.html" import render_tree_nav %}
+{% block body %}
+  <div class="row">
+    <div class="col-sm-3">
+      {{ render_tree_nav('/governance', here=this) }}
+    </div>
+    <div class="col-sm-9">
+      <h1>{{ this.title }}</h1>
+      {{ this.body }}
+
+      {% if this.children %}
+      <div class="child-pages nocontent">
+        {% for cols in this.children|batch(2) %}
+          <div class="row">
+            {% for page in cols if page %}
+            <div class="col-md-6 child">
+              <h4><a href="{{ page|url }}">{{ page.title }}</a></h4>
+              {% if page.summary %}
+                <p class="summary">{{ page.summary }}</p>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

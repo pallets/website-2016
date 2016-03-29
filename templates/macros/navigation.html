@@ -1,0 +1,20 @@
+{% macro render_tree_nav(base_path, here=none, flatten_first_level=true) %}
+  <ul class="tree-nav nocontent">
+    {% set base = site.get(base_path) %}
+    <li{% if here and here._path == base_path %} class="active"{% endif
+      %}><a href="{{ base|url }}">{{ base.name or base.title }}</a>
+    {% if flatten_first_level %}
+      </li>
+    {% else %}
+      <ul>
+    {% endif %}
+    {% for child in base.children recursive %}
+      <li{% if here and here._path == child._path %} class="active"{% endif
+          %}><a href="{{ child|url }}">{{ child.name or child.title }}</a>
+        {% if here and here.is_child_of(child) %}
+        <ul>{{ loop(child.children) }}</ul>
+        {% endif %}
+    {% endfor %}
+    {% if flatten_first_level %}</li>{% else %}</ul>{% endif %}
+  </ul>
+{% endmacro %}

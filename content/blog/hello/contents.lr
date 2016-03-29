@@ -1,0 +1,13 @@
+title: Hello Pallets Users
+---
+pub_date: 2016-03-29
+---
+author: Armin Ronacher
+---
+body:
+
+Welcome to the Pallets Project.  While it has a new name it's essentially
+what you already know and love: Flask, Werkzeug, Jinja2 and many of the other
+Pocoo libraries.
+
+If you discover this right now, this is not announced yet and work in progress :)

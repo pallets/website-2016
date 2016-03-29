@@ -4,3 +4,9 @@ name = Pallets Website
 [packages]
 lektor-webpack-support = 0.1
 lektor-markdown-highlighter = 0.1
+
+[servers.production]
+enabled = yes
+name = Production
+target = rsync://deploy@flow.srv.pocoo.org/srv/websites/palletsproject.com/static
+default = yes

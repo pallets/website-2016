@@ -2,12 +2,24 @@
 {% block title %}{{ this.name }}{% endblock %}
 {% block people_body %}
   <h1>{{ this.name }}</h1>
-  <dl>
-    <dt>Nickname:
-    <dd>{{ this.nickname }}
-    <dt>Location:
-    <dd>{{ this.location }}
-    <dt>Role:
-    <dd>{{ this.role }}
-  </dl>
+  <div class="row">
+    <div class="col-sm-9">
+      {{ this.description }}
+    </div>
+    <div class="col-sm-3">
+      <div class="infobox">
+        <p><span class="fa fa-fw fa-twitter"></span> <a href="https://twitter.com/{{ this.twitter }}">{{ this.twitter }}</a>
+        <p><span class="fa fa-fw fa-github"></span> <a href="https://github.com/{{ this.github_username }}">{{ this.github_username }}</a>
+        {% if this.location %}
+        <p><span class="fa fa-fw fa-map-marker"></span> {{ this.location }}
+        {% endif %}
+        {% if this.role %}
+        <p><span class="fa fa-fw fa-user"></span> {{ this.role }}
+        {% endif %}
+        {% if this.website %}
+        <p><span class="fa fa-fw fa-external-link"></span> <a href="{{ this.website }}">{{ this.website.host }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

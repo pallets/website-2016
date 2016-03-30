@@ -1,6 +1,13 @@
-{% extends "project-layout.html" %}
+{% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
-{% block project_body %}
+{% block body %}
   <h1>{{ this.title }}</h1>
   {{ this.body }}
+  <hr>
+  <ul>
+    {% for project in this.children %}
+      <li><a href="{{ project|url }}">{{ project.name }}</a>
+        — {{ project.tagline }}
+    {% endfor %}
+  </ul>
 {% endblock %}

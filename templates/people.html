@@ -3,4 +3,11 @@
 {% block people_body %}
   <h1>{{ this.title }}</h1>
   {{ this.body }}
+  <hr>
+  <ul>
+    {% for person in this.children %}
+      <li><a href="{{ person|url }}">{{ person.name }}</a> aka <i>{{ person.github_username }}</i>
+        — {{ person.role }}
+    {% endfor %}
+  </ul>
 {% endblock %}

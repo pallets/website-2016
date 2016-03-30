@@ -2,6 +2,14 @@ _model: project
 ---
 name: Flask
 ---
+tagline: a flexible and popular web development framework
+---
+website: http://flask.pocoo.org/
+---
+documentation: http://flask.pocoo.org/docs/
+---
+pypi_name: Flask
+---
 description:
 
 Flask is a microframework for Python based on Werkzeug, Jinja 2 and good

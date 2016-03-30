@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var options = {
   entry: {
-    'app': './js/app.js',
+    'app': './js/app.jsx',
     'styles': './scss/main.scss'
   },
   output: {
@@ -15,12 +15,12 @@ var options = {
   devtool: '#cheap-module-source-map',
   resolve: {
     modulesDirectories: ['node_modules'],
-    extensions: ['', '.js']
+    extensions: ['', '.jsx', '.js']
   },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },

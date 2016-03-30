@@ -1,4 +1,5 @@
 {% extends "people-layout.html" %}
+{% from 'macros/person.html' import detail, link_detail %}
 {% block title %}{{ this.name }}{% endblock %}
 {% block people_body %}
   <h1>{{ this.name }}</h1>
@@ -8,17 +9,12 @@
     </div>
     <div class="col-sm-3">
       <div class="infobox">
-        <p><span class="fa fa-fw fa-twitter"></span> <a href="https://twitter.com/{{ this.twitter }}">{{ this.twitter }}</a>
-        <p><span class="fa fa-fw fa-github"></span> <a href="https://github.com/{{ this.github_username }}">{{ this.github_username }}</a>
-        {% if this.location %}
-        <p><span class="fa fa-fw fa-map-marker"></span> {{ this.location }}
-        {% endif %}
-        {% if this.role %}
-        <p><span class="fa fa-fw fa-user"></span> {{ this.role }}
-        {% endif %}
-        {% if this.website %}
-        <p><span class="fa fa-fw fa-external-link"></span> <a href="{{ this.website }}">{{ this.website.host }}</a>
-        {% endif %}
+        {{ detail('user', this.role) }}
+        {{ detail('map-marker', this.location) }}
+        {{ link_detail('external-link', this.website.host if this.website else none, this.website) }}
+        {{ link_detail('twitter', this.twitter, 'https://twitter.com/' ~ this.twitter) }}
+        {{ link_detail('github', this.github, 'https://github.com/' ~ this.github) }}
+        {{ link_detail('bitbucket', this.bitbucket, 'https://github.com/' ~ this.bitbucket) }}
       </div>
     </div>
   </div>

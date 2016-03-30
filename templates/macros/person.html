@@ -1,0 +1,19 @@
+{% macro detail(icon, value) -%}
+    {% if value -%}
+        <p>
+            <span class="fa fa-fw fa-{{ icon }}"></span>
+            {% if caller is undefined -%}
+                {{ value }}
+            {%- else -%}
+                {{ caller(value, *varargs) }}
+            {%- endif %}
+        </p>
+    {%- endif %}
+{%- endmacro %}
+
+
+{% macro link_detail(icon, value, href) -%}
+    {% call(value, href) detail(icon, value, href) -%}
+        <a href="{{ href }}">{{ value }}</a>
+    {%- endcall %}
+{%- endmacro %}

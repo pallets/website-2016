@@ -5,14 +5,16 @@
       <img src="logo-large.png" style="height: 250px">
       <h1>{{ this.title }}</h1>
       {{ this.body }}
-      <div class="row">
-        {% for project in site.query('/projects') %}
+      {% for cols in site.query('/projects')|batch(2) %}
+        <div class="row">
+          {% for project in cols if project %}
           <div class="project col-md-6">
             <h3><a href="{{ project|url }}">{{ project.name }}</a></h3>
             <p>{{ project.tagline }}
           </div>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}

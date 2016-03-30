@@ -1,12 +1,6 @@
-{% extends "layout.html" %}
+{% extends "project-layout.html" %}
 {% block title %}{{ this.name }}{% endblock %}
-{% block body %}
-  <ul class="project-selector">
-    <li><a href="{{ this.parent|url }}">Overview</a>
-    {% for project in this.parent.children %}
-      <li{% if this == project %} class="active"{% endif %}><a href="{{ project|url }}">{{ project.name }}</a>
-    {% endfor %}
-  </ul>
+{% block project_body %}
   <h1>{{ this.name }}</h1>
   <div class="row">
     <div class="col-sm-9">

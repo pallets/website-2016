@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% from "macros/navigation.html" import render_tree_nav %}
+{% block body %}
+  {% set projects = site.get('/projects') %}
+  <ul class="project-selector">
+    <li{% if this == projects %} class=active{% endif
+      %}><a href="{{ projects|url }}">Overview</a>
+    {% for project in projects.children %}
+      <li{% if this == project %} class=active{% endif
+        %}><a href="{{ project|url }}">{{ project.name }}</a>
+    {% endfor %}
+  </ul>
+  {% block project_body %}{% endblock %}
+{% endblock %}

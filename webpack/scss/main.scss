@@ -478,6 +478,28 @@ div.admonition {
 /* hello */
 div.hello-box {
   text-align: center;
+
+  img.logo {
+    margin: 20px;
+    height: 250px;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 200;
+    margin: 30px 0 15px 0;
+  }
+
+  div.project {
+    margin: 20px 0;
+    line-height: 1.4;
+    h3 {
+      margin: 0 0 10px 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
 }
 
 /* infobox */

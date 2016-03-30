@@ -2,8 +2,9 @@
 {% block title %}{{ this.name }}{% endblock %}
 {% block body %}
   <ul class="project-selector">
+    <li><a href="{{ this.parent|url }}">Overview</a>
     {% for project in this.parent.children %}
-      <li><a href="{{ project|url }}">{{ project.name }}</a>
+      <li{% if this == project %} class="active"{% endif %}><a href="{{ project|url }}">{{ project.name }}</a>
     {% endfor %}
   </ul>
   <h1>{{ this.name }}</h1>
@@ -15,7 +16,9 @@
       <div class="infobox">
         <p><span class="fa fa-fw fa-github"></span>
           <a href="https://github.com/pallets/{{ this._id }}">pallets/{{ this._id }}</a>
+        {% if this.website %}
         <p><span class="fa fa-fw fa-external-link"></span> <a href="{{ this.website }}">{{ this.website.host }}</a>
+        {% endif %}
         <p><span class="fa fa-fw fa-list"></span> <a href="https://pypi.python.org/pypi/{{ this.pypi_name }}">{{ this.pypi_name }} on PyPI</a>
         <p><span class="fa fa-fw fa-book"></span> <a href="{{ this.documentation }}">Documentation</a>
         <div class="pypi-box" data-pypi="{{ this.pypi_name }}"></div>

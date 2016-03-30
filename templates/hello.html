@@ -7,9 +7,7 @@
     {% for project in site.query('/projects') %}
       <div class=project>
         <h3><a href="{{ project|url }}">{{ project.name }}</a></h3>
-        <div class=description>
-          {{ project.description }}
-        </div>
+        <p>{{ project.tagline }}
       </div>
     {% endfor %}
   </div>

@@ -10,11 +10,6 @@ documentation: http://flask.pocoo.org/docs/
 ---
 pypi_name: Flask
 ---
-description:
-
-Flask is a microframework for Python based on Werkzeug, Jinja 2 and good
-intentions.
----
 body:
 
 Flask is a Python web development framework based on the

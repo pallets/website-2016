@@ -39,6 +39,10 @@ body {
   background: lighten($gray, 20);
 }
 
+pre {
+  font-size: 0.9em;
+}
+
 h2 {
   font-weight: 200;
 }
@@ -502,6 +506,9 @@ ul.project-selector {
     margin: 0;
     & + li:before {
       content: " · ";
+    }
+    &.active {
+      font-weight: bold;
     }
   }
 }

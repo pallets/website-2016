@@ -213,13 +213,17 @@ for approved Flask extensions.
 
 Rules for comments are similar to docstrings.  Both are formatted with
 reStructuredText.  If a comment is used to document an attribute, put a
-colon after the opening pound sign (`#`)::
+colon after the opening pound sign (`#`).  If a comment is on the
+same line as code, use two spaces before the `#`.
 
 ```python
-class User(object): #: the name of the user as unicode string
+class User(object):
+    #: the name of the user as unicode string
     name = Column(String)
     #: the sha1 hash of the password + inline salt
     pw_hash = Column(String)
+    
+    _groups = None  # cache groups after loading
 ```
 ---
 summary: The code styleguide that pallets projects follow.

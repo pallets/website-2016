@@ -145,7 +145,7 @@ try to avoid instance checks in general.  Check for features.
 
 ## Naming Conventions
 
-- cass names: `CamelCase`, with acronyms kept uppercase (`HTTPWriter`
+- class names: `CamelCase`, with acronyms kept uppercase (`HTTPWriter`
   and not `HttpWriter`)
 - variable names: `lowercase_with_underscores`
 - method and function names: `lowercase_with_underscores`

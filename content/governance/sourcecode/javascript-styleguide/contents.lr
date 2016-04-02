@@ -1,0 +1,22 @@
+title: JavaScript Styleguide
+---
+body:
+
+Pallets projects currently have very little JavaScript inside which is why
+the guidelines are not fully set up so far.  There are only a handful of
+rules to follow:
+
+## Indentation
+
+Two spaces
+
+## Naming
+
+* methods and functions: `camelCase`
+* classes: `PascalCase`
+
+## Strings
+
+Try to use single quote strings for everything if you can.
+---
+summary: The JavaScript styleguide that Pallets projects follow.

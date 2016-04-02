@@ -1,4 +1,4 @@
-title: Styleguide
+title: Python Styleguide
 ---
 body:
 
@@ -226,4 +226,4 @@ class User(object):
     _groups = None  # cache groups after loading
 ```
 ---
-summary: The code styleguide that pallets projects follow.
+summary: The Python styleguide that Pallets projects follow.

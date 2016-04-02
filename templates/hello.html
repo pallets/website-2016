@@ -2,7 +2,7 @@
 {% block body %}
   <div class="hello-box row">
     <div class="col-md-offset-2 col-md-8">
-      <img src="logo-large.png" style="height: 250px">
+      <img src="logo-large.png" class="logo">
       <h1>{{ this.title }}</h1>
       {{ this.body }}
       {% for cols in site.query('/projects')|batch(2) %}

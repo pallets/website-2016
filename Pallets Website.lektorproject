@@ -4,6 +4,7 @@ name = Pallets Website
 [packages]
 lektor-webpack-support = 0.1
 lektor-markdown-highlighter = 0.1
+lektor-markdown-header-anchors = 0.1
 
 [servers.production]
 enabled = yes

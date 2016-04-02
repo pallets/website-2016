@@ -4,6 +4,18 @@
   <div class="row">
     <div class="col-sm-3">
       {{ render_tree_nav('/governance', here=this) }}
+
+      {% if this.body.toc %}
+      <div class="visible-md-block visible-lg-block">
+        <h4>This Page</h4>
+        <ul class="toc">
+        {% for item in this.body.toc recursive %}
+          <li><a href="#{{ item.anchor }}">{{ item.title }}</a>{%
+           if item.children %}<ul>{{ loop(item.children) }}</ul>{% endif %}
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </div>
     <div class="col-sm-9">
       <h1>{{ this.title }}</h1>

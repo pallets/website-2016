@@ -15,6 +15,14 @@ All sourcecode and issue management is currently located on Github:
 * [Team Management on Github](https://github.com/orgs/pallets/teams)
   (requires owner access)
 
+## Continuous Integration
+
+All projects use [Travis-CI](https://travis-ci.org/) and some use
+[AppVeyor](https://www.appveyor.com/) for testing.  You can find the
+projects on the overview page of the organization:
+
+* [Pallets on Travis-CI](https://travis-ci.org/pallets)
+
 ## Website Hosting
 
 The websites are hosted on "flow", a Hetzner server in Germany.  Currently the

@@ -14,8 +14,11 @@
         <p><span class="fa fa-fw fa-external-link"></span> <a href="{{ this.website }}">{{ this.website.host }}</a>
         {% endif %}
         <p><span class="fa fa-fw fa-list"></span> <a href="https://pypi.python.org/pypi/{{ this.pypi_name }}">{{ this.pypi_name }} on PyPI</a>
+        <p><span class="fa fa-fw fa-cogs"></span> <a href="https://travis-ci.org/pallets/{{ this._id }}">Status on Travis-CI</a>
         <p><span class="fa fa-fw fa-book"></span> <a href="{{ this.documentation }}">Documentation</a>
         <div class="pypi-box" data-pypi="{{ this.pypi_name }}"></div>
+        <h3>Build Status</h3>
+        <p><a href="https://travis-ci.org/pallets/{{ this._id }}"><img src="https://travis-ci.org/pallets/{{ this._id }}.svg?branch=master"></a>
       </div>
     </div>
   </div>

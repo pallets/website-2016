@@ -53,6 +53,10 @@
         <div class="col-sm-4 icon-bar">
           <a href="https://github.com/pallets/" title="Pallets on GitHub"
             ><i class="fa fa-github"></i></a>
+          {%- if this.path %}
+          <a href="https://github.com/pallets/website/tree/master/content{{ this.path.split('@')[0]
+            }}/contents.lr" title="View source for this page"><i class="fa fa-code"></i></a>
+          {%- endif %}
         </div>
         <div class="col-sm-8">
           <a href="{{ '/license'|url }}">License &amp; Copyright</a> •
@@ -63,4 +67,5 @@
     </div>
   </footer>
   {% endblock %}
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 </body>

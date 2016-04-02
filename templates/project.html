@@ -1,7 +1,20 @@
 {% extends "project-layout.html" %}
 {% block title %}{{ this.name }}{% endblock %}
 {% block project_body %}
-  <h1>{{ this.name }}</h1>
+  <div class="row">
+    <div class="col-sm-9">
+      <h1>{{ this.name }}</h1>
+    </div>
+    <div class="col-sm-3">
+      <div class="github-button">
+        <a class="github-button" href="https://github.com/pallets/{{ this._id }}"
+          data-style="mega" data-count-href="/pallets/{{ this._id }}/stargazers"
+          data-count-api="/repos/pallets/{{ this._id }}#stargazers_count"
+          data-count-aria-label="# stargazers on GitHub"
+          aria-label="Star pallets/{{ this._id }} on GitHub">Star</a>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-sm-9">
       {{ this.body }}

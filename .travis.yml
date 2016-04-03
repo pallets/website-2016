@@ -6,10 +6,11 @@ install:
 script:
   - "lektor build -f webpack"
   - "test \"$TRAVIS_PULL_REQUEST\" == \"false\" && test \"$TRAVIS_BRANCH\" == \"master\" && lektor deploy production"
-cache:
-  directories:
-    - $HOME/.cache/pip
-    - $HOME/.cache/lektor/builds
+# temporary disabled because of travis issues
+#cache:
+#  directories:
+#    - $HOME/.cache/pip
+#    - $HOME/.cache/lektor/builds
 addons:
   ssh_known_hosts: flow.srv.pocoo.org
 

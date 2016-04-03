@@ -30,14 +30,14 @@ successful but I attribute a lot of it to the fact that it's easy to get
 started and the full footprint of the framework is small enough that it becomes
 easy enough to understand.
 
-So what's changing now?  Today we launch the Pallets Project.  What is it?
+So what's changing now?  Today we launch the Pallets Projects.  What is it?
 Primarily it's a Github organization which will be the home of Flask and all
 the associated projects.  It will be a new home for those libraries and the
 first step to give the community more impact on the development of Flask and
 all libraries.  In addition there will be a new release of Flask very soon
 after a thorough check that we do not break anything.
 
-The people behind the Pallets Project are [me](/people/mitsuhiko/),
+The people behind the Pallets Projects are [me](/people/mitsuhiko/),
 [Markus Unterwaditzer](/people/untitaker), [David Lord](/people/davidism/)
 and [Adrian Mönnich](https://github.com/ThiefMaster) with the organization
 being open for newcomers to help and drive the projects forward.

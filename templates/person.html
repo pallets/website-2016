@@ -4,7 +4,7 @@
 {% block people_body %}
   <h1>{{ this.name }}</h1>
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-8">
       {{ this.description }}
       <hr>
       <a class="github-button"
@@ -15,7 +15,7 @@
         data-count-aria-label="# followers on GitHub"
         aria-label="Follow @{{ this.github }} on GitHub">Follow @{{ this.github }}</a>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <div class="infobox">
         {{ detail('user', this.role) }}
         {{ detail('map-marker', this.location) }}

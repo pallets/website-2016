@@ -1,0 +1,14 @@
+{% extends "blog-layout.html" %}
+{% block title %}{{ this.name }}{% endblock %}
+{% block blog_body %}
+  <h1>{{ this.name }}</h1>
+  {{ this.description }}
+  <p>Subscribe to the <a href="{{ '@blog-feed'|url }}">RSS Feed</a>.
+  <hr>
+  <ul>
+    {% for post in this.children %}
+      <li><a href="{{ post|url }}">{{ post.title }}</a>, {{
+        post.pub_date|dateformat('full') }}
+    {% endfor %}
+  </ul>
+{% endblock %}

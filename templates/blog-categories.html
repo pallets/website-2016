@@ -1,0 +1,21 @@
+{% extends "blog-layout.html" %}
+{% block title %}Blog Categories{% endblock %}
+{% block blog_body %}
+  <h1>Blog Categories</h1>
+  <p>
+    We try to organize the blog posts here into categories so that you
+    can subscribe to specific feeds.  In particular the feed for important
+    library releases might be of interest to you.
+  <div class="child-pages nocontent">
+    {% for cols in this.children|batch(2) %}
+      <div class="row">
+        {% for page in cols if page %}
+        <div class="col-md-6 child">
+          <h4><a href="{{ page|url }}">{{ page.name }}</a></h4>
+          <p class="summary">{{ page.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

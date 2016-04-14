@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% macro nav(target, title=none) %}
+  {% set target = site.get(target) if target is string else target %}
+  {% set title = title or target.title or target.name %}
+  <li{% if this._path == target._path %} class=active{% endif %}><a href="{{
+    target|url }}">{{ title }}</a>{% if caller %}<ul>{{
+    caller(target) }}</ul>{% endif %}</li>
+{% endmacro %}
+{% block body %}
+  <div class="row">
+    <div class="col-sm-3">
+      <ul class="tree-nav nocontent">
+        {{ nav('/blog') }}
+        {% call(categories) nav('/blog-categories', title='Categories') %}
+          {% for category in categories.children %}
+            {{ nav(category) }}
+          {% endfor %}
+        {% endcall %}
+        {% if this.is_child_of('/blog-categories', strict=true) %}
+          <li><a href="{{ '@blog-feed'|url }}">{{ this.name }} Feed</a>
+        {% else %}
+          <li><a href="{{ '/blog@blog-feed'|url }}">Blog Feed</a>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="col-sm-9">
+      {% block blog_body %}{% endblock %}
+    </div>
+  </div>
+{% endblock %}

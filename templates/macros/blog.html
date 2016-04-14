@@ -14,6 +14,14 @@
       {{ post.author }}
     {% endif %}
     on {{ post.pub_date }}
+    {%- if post.categories %}
+      in
+      {% for category_id in post.categories %}
+        {%- set category = site.get('/blog-categories/' ~ category_id) %}
+        {%- if not loop.first %},{% endif %}
+        <a href="{{ category|url }}">{{ category.name }}</a>
+      {% endfor %}
+    {% endif %}
   </p>
   {{ post.body }}
   </div>

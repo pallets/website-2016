@@ -1,5 +1,7 @@
 [project]
 name = Pallets Website
+url = https://www.palletsprojects.com/
+url_style = absolute
 
 [packages]
 lektor-webpack-support = 0.1

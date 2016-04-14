@@ -14,7 +14,7 @@ Today we pushed out a [Werkzeug](/p/werkzeug/) bugfix release which contains
 a security relevant fix.  It has come to our attention (reported by [Jordan Milne](https://github.com/JordanMilne/))
 that the PIN brute-force protection in the Werkzeug debugger could be bypassed
 by attacking the cookie rather than the PIN.  While this is generally not easily
-fixable we improved by situation by mixing in higher quality secret data into the
+fixable we improved the situation by mixing in higher quality secret data into the
 cookie name and made it more complex.  We now include a UUID of the machine
 the code is running on.
 

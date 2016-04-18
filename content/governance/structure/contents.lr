@@ -25,13 +25,13 @@ can both be a huge maintenance burden as well as be a great help in avoiding
 to have to maintain a bunch of services ourselves.  As such the process going
 forward is to absolutely embrace external services for as long as we know how
 to migrate off them if necessary and that we're sufficiently convinced that
-they are well run.  For instance we're very happy to be reliant on Github,
+they are well run.  For instance we're very happy to be reliant on GitHub,
 Travis-CI and other services for code hosting and similar things.
 
 ## Permissions
 
-The permission structure is managed on Github which is our primary home for
+The permission structure is managed on GitHub which is our primary home for
 the project.  In particular it also shows who can commit to different
 projects and how.  The teams can be found here:
 
-* [Teams on Github](https://github.com/orgs/pallets/teams)
+* [Teams on GitHub](https://github.com/orgs/pallets/teams)

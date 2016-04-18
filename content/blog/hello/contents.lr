@@ -21,7 +21,7 @@ did use dependencies and encouraged it.
 One month later there was a new project by the name of "Flask" which actually
 gave this concept a real shot.  It launched with the tagline "a microframework
 for Python based on Werkzeug, Jinja 2 and good intentions" and six years later
-it's the most starred Python framework on Github.
+it's the most starred Python framework on GitHub.
 
 What's interesting about Flask is that its success just happened.  There are
 no conferences about it, no society or foundation and still today much of it
@@ -31,7 +31,7 @@ started and the full footprint of the framework is small enough that it becomes
 easy enough to understand.
 
 So what's changing now?  Today we launch the Pallets Projects.  What is it?
-Primarily it's a Github organization which will be the home of Flask and all
+Primarily it's a GitHub organization which will be the home of Flask and all
 the associated projects.  It will be a new home for those libraries and the
 first step to give the community more impact on the development of Flask and
 all libraries.  In addition there will be a new release of Flask very soon

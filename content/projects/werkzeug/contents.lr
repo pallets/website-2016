@@ -30,7 +30,7 @@ It does Unicode and doesn't enforce a specific template engine, database adapter
 * Easy to use request and response objects
 * Interactive JavaScript based in-browser debugger
 * 100% WSGI 1.0 compatible
-* Supports Python 2.6, 2.7 and 3.3.
+* Supports Python 2.6, 2.7, 3.3, 3.4 and 3.5.
 * Unicode support
 * Basic session and signed cookie support
 * URI and IRI utilities with unicode awareness

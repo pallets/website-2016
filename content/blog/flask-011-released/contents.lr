@@ -36,7 +36,8 @@ take care of those things themselves.
 
 - Added support to serializing top-level arrays to `flask.jsonify`. This
   introduces a security risk in ancient browsers. See
-  `json-security` for details.
+  [json-security](http://flask.pocoo.org/docs/0.11/security/#json-security)
+  for details.
 - Added before_render_template signal.
 - Added `**kwargs` to `flask.Test.test_client` to support passing
   additional keyword arguments to the constructor of

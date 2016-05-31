@@ -91,18 +91,18 @@ take care of those things themselves.
   part of https://github.com/kennethreitz/httpbin/issues/168
 - The automatically provided `OPTIONS` method is now correctly disabled if
   the user registered an overriding rule with the lowercase-version
-  `options` (issue `#1288`).
-- `flask.json.jsonify` now supports the `datetime.date` type (pull request
-  `#1326`).
+  `options` (issue [`#1288`](https://github.com/pallets/flask/issues/1288)).
+- [`flask.json.jsonify`](http://flask.pocoo.org/docs/0.11/api/#flask.json.jsonify) now supports the `datetime.date` type (pull request
+  [`#1326`](https://github.com/pallets/flask/pull/1326)).
 - Don't leak exception info of already caught exceptions to context teardown
-  handlers (pull request `#1393`).
-- Allow custom Jinja environment subclasses (pull request `#1422`).
-- `flask.g` now has `pop()` and `setdefault` methods.
+  handlers (pull request [`#1393`](https://github.com/pallets/flask/pull/1393)).
+- Allow custom Jinja environment subclasses (pull request [`#1422`](https://github.com/pallets/flask/pull/1422)).
+- [`flask.g`](http://flask.pocoo.org/docs/0.11/api/#flask.g) now has `pop()` and `setdefault` methods.
 - Turn on autoescape for `flask.templating.render_template_string` by default
-  (pull request `#1515`).
-- `flask.ext` is now deprecated (pull request `#1484`).
-- `send_from_directory` now raises BadRequest if the filename is invalid on
-  the server OS (pull request `#1763`).
-- Added the `JSONIFY_MIMETYPE` configuration variable (pull request `#1728`).
+  (pull request [`#1515`](https://github.com/pallets/flask/pull/1515)).
+- `flask.ext` is now deprecated (pull request [`#1484`](https://github.com/pallets/flask/pull/1484)).
+- [`send_from_directory`](http://flask.pocoo.org/docs/0.11/api/#flask.send_from_directory) now raises BadRequest if the filename is invalid on
+  the server OS (pull request [`#1763`](https://github.com/pallets/flask/pull/1763)).
+- Added the `JSONIFY_MIMETYPE` configuration variable (pull request [`#1728`](https://github.com/pallets/flask/pull/1728)).
 - Exceptions during teardown handling will no longer leave bad application
   contexts lingering around.

@@ -6,6 +6,8 @@ body:
 
 Flask 0.12 has been released. This is not as big a step as 0.11 has been, the only intentionally backwards-incompatible change is with regards to `send_file`'s behavior, which, when invoked as `send_file(f)` with `f` being a file-like object, no longer guesses the MIME-type from `f.name`. You have to pass a filepath instead.
 
+Special thanks to [Kyle Lawlor](https://github.com/wgwz) for fixing up most documentation after the `flask` CLI got introduced.
+
 ## Changelog
 
 - the cli command now responds to `--version`.

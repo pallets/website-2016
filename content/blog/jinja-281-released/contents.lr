@@ -48,7 +48,7 @@ jinja2.exceptions.SecurityError: ...
 If you don't want or you cannot upgrade Jinja2, you can override the `is_safe_attribute`
 method on the sandbox and explicitly disallow all `format` attributes on strings.
 ---
-categories: releases
+categories: releases, security
 ---
 pub_date: 2016-12-29
 ---

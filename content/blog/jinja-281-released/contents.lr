@@ -38,7 +38,7 @@ intercept format strings the same way as with normal cases:
 ...   self.name = name
 ...
 >>> t = env.from_string(
-...  '{{ "{0.__class__.__init__.__globals__[config]}".format(user) }}')
+...  '{{ "{0.__class__.__init__.__globals__}".format(user) }}')
 >>> t.render(user=User('joe'))
 Traceback (most recent call last):
   ...

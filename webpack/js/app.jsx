@@ -40,11 +40,6 @@ const PyPIBox = React.createClass({
         <h3>Latest Release</h3>
         <p><strong>Version:</strong>{' '}
           {this.state.latestRelease}</p>
-        <h3>Downloads</h3>
-        <p><strong>Last month:</strong>{' '}
-          {abbrRoundNumber(this.state.downloadInfo.last_month)}</p>
-        <p><strong>Last week:</strong>{' '}
-          {abbrRoundNumber(this.state.downloadInfo.last_week)}</p>
       </div>
     );
   }

@@ -72,7 +72,7 @@ Jinja2 now has an internal policy configuration which permits one to centrally r
 
 One of the reasons Jinja2 was lying largely dormant is that it's always scary to touch something so many people use. While bugs were known for quite some time it requires careful changes to not change all the template code out there. In particular once salt and ansible started using Jinja it became a big emotional burden to do changes on it.
 
-However it turns out that emotional burden does not get smaller for as long as those bugs are in there. Going in and cleaning up the behavior actually turns out to be healthier on the long run. Now even if this release introduces regressions in behavior, the internal code quality is much improved and reasoning about the runtime and compiler is a lot easier now.
+However it turns out that emotional burden does not get smaller for as long as those bugs are in there. Going in and cleaning up the behavior actually turns out to be healthier in the long run. Now even if this release introduces regressions in behavior, the internal code quality is much improved and reasoning about the runtime and compiler is a lot easier now.
 
 On a personal note I'm happy to see how popular Jinja has become and I hope that with this release it becomes more enjoyable to write Jinja templates.
 

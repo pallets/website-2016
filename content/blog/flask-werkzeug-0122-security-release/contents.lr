@@ -37,7 +37,7 @@ We strongly recommend upgrading to Flask 0.12.2 and Werkzeug 0.12.2, as this
 bug has been fixed there ([Flask](https://github.com/pallets/flask/pull/2284),
 [Werkzeug](https://github.com/pallets/werkzeug/commit/2497866d7eafa64ca5eb4fb3d1747c05036bf318)).
 
-A CVE has been requested today, that is, `Tue, 16 May 2017 06:51:09 +0000`.
+A CVE has been requested on `Tue, 16 May 2017 06:51:09 +0000`, the CVE `CVE-2017-9088` was assigned.
 
 ---
 categories: releases, security

@@ -14,8 +14,7 @@ var options = {
   },
   devtool: '#cheap-module-source-map',
   resolve: {
-    modulesDirectories: ['node_modules'],
-    extensions: ['', '.jsx', '.js']
+    extensions: ['.jsx', '.js']
   },
   module: {
     loaders: [
@@ -26,29 +25,25 @@ var options = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader!sass-loader'})
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})
       },
       {
         test: /\.(woff2?|ttf|eot|svg|png)(\?.*?)?$/,
-        loader: 'file'
+        loader: 'file-loader'
       }
     ]
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    new ExtractTextPlugin('styles.css', {
-      allChunks: true
-    })
+    new ExtractTextPlugin({filename: 'styles.css', allChunks: true})
   ]
 };
 

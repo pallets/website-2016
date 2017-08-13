@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {abbrRoundNumber} from './utils';
 
 require('bootstrap');
 
@@ -22,7 +21,6 @@ const PyPIBox = React.createClass({
       url: 'https://pypi.python.org/pypi/' + this.props.packageName + '/json',
       crossDomain: true
     }).then((data) => {
-      console.log(data);
       this.setState({
         latestRelease: data.info.version,
         downloadInfo: data.info.downloads

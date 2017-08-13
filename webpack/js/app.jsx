@@ -1,19 +1,17 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 require('bootstrap');
 
-const PyPIBox = React.createClass({
-  propTypes: {
-    packageName: React.PropTypes.string
-  },
-
-  getInitialState() {
-    return {
+class PyPIBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       latestRelease: null,
       downloadInfo: null
-    }
-  },
+    };
+  }
 
   componentDidMount() {
     $.ajax({
@@ -26,7 +24,7 @@ const PyPIBox = React.createClass({
         downloadInfo: data.info.downloads
       });
     });
-  },
+  }
 
   render() {
     if (!this.state.downloadInfo) {
@@ -41,7 +39,11 @@ const PyPIBox = React.createClass({
       </div>
     );
   }
-});
+}
+
+PyPIBox.propTypes = {
+  packageName: PropTypes.string
+};
 
 function initPyPIStats() {
   $('.pypi-box').each(function() {

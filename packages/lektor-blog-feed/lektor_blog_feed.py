@@ -8,6 +8,7 @@ from lektor.build_programs import BuildProgram
 from lektor.pluginsystem import Plugin
 from lektor.context import get_ctx, url_to
 from lektor.sourceobj import VirtualSourceObject
+from werkzeug._compat import to_native, to_bytes, text_type
 
 from werkzeug.contrib.atom import AtomFeed
 
@@ -31,6 +32,7 @@ class BlogFeedSource(VirtualSourceObject):
 
 
 def get_id(s):
+    s = text_type(s).encode('utf8')
     return uuid.UUID(bytes=hashlib.md5(s).digest(), version=3).urn
 
 
@@ -58,7 +60,7 @@ class AtomFeedBuilderProgram(BuildProgram):
 
             feed.add(
                 item['title'],
-                unicode(item['body']),
+                text_type(item['body']),
                 xml_base=url_to(item, external=True),
                 url=url_to(item, external=True),
                 content_type='html',

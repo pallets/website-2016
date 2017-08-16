@@ -1,7 +1,7 @@
 dist: trusty
 sudo: false
 language: python
-python: 3.6
+python: 2.7
 install:
   - pip install Lektor
   - npm install --global npm@latest

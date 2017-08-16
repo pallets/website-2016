@@ -1,20 +1,23 @@
+dist: trusty
+sudo: false
 language: python
-cache: pip
-python: 2.7
+python: 3.6
 install:
-  - "pip install -U pip"
-  - "pip install Lektor"
+  - pip install Lektor
+  - npm install --global npm@latest
 script:
-  - "lektor build -f webpack"
-  - "test \"$TRAVIS_PULL_REQUEST\" == \"false\" && test \"$TRAVIS_BRANCH\" == \"master\" && lektor deploy production"
-# temporary disabled because of travis issues
+  - lektor build -f webpack
+after_success:
+  - test "$TRAVIS_PULL_REQUEST" == "false" && test "$TRAVIS_BRANCH" == "master" && lektor deploy production
+cache: pip
+# disabled because of travis issues
 #cache:
 #  directories:
 #    - $HOME/.cache/pip
 #    - $HOME/.cache/lektor/builds
 addons:
-  ssh_known_hosts: flow.srv.pocoo.org
-
+  ssh_known_hosts:
+    - flow.srv.pocoo.org
 notifications:
   webhooks:
     urls:

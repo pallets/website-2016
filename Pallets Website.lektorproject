@@ -7,7 +7,7 @@ url_style = absolute
 lektor-webpack-support = 0.3
 lektor-markdown-highlighter = 0.1
 lektor-markdown-header-anchors = 0.1
-lektor-open-graph = 1b2
+lektor-open-graph = 1b4
 
 [servers.production]
 enabled = yes

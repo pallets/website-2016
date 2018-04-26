@@ -26,7 +26,12 @@
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">{% for id, item in bag('menu').items() %}
           <li{% if this.is_child_of(item.path) or (item.alt_path and this.is_child_of(item.alt_path)) %} class="active"{% endif %}>
-            <a href="{{ item.path|url }}">{% if item.strong %}<strong>{{ item.label }}</strong>{% else %}{{ item.label }}{% endif %}</a></li>
+            {% if id == 'donate' %}
+              <a href="{{ item.path }}"><strong>{{ item.label }}</strong></a>
+            {% else %}
+              <a href="{{ item.path|url }}">{{ item.label }}</a>
+            {% endif %}
+          </li>
         {% endfor %}</ul>
       </div>
     </div>

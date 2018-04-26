@@ -35,7 +35,7 @@ Flask will now detect the encoding of incoming JSON data as one of the supported
 Install or Upgrade
 -------------------
 
-Install from [PyPI](https://pypi.org/projects/Flask/) with pip:
+Install from [PyPI](https://pypi.org/project/Flask/) with pip:
 
     pip install -U Flask
 

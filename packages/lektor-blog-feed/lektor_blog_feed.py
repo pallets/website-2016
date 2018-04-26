@@ -1,23 +1,20 @@
 # -*- coding: utf-8 -*-
-import uuid
 import hashlib
 import posixpath
+import uuid
 from datetime import datetime
 
 from lektor.build_programs import BuildProgram
-from lektor.pluginsystem import Plugin
 from lektor.context import get_ctx, url_to
+from lektor.pluginsystem import Plugin
 from lektor.sourceobj import VirtualSourceObject
-from werkzeug._compat import to_native, to_bytes, text_type
-
+from werkzeug._compat import text_type
 from werkzeug.contrib.atom import AtomFeed
-
 
 FEED_NAME = 'feed.xml'
 
 
 class BlogFeedSource(VirtualSourceObject):
-
     def __init__(self, parent, plugin):
         VirtualSourceObject.__init__(self, parent)
         self.plugin = plugin
@@ -37,7 +34,6 @@ def get_id(s):
 
 
 class AtomFeedBuilderProgram(BuildProgram):
-
     def produce_artifacts(self):
         self.declare_artifact(
             self.source.url_path,
@@ -55,7 +51,9 @@ class AtomFeedBuilderProgram(BuildProgram):
             id=get_id(ctx.env.project.id)
         )
 
-        for item in page.children.order_by('-pub_date').limit(10):
+        for item in page.children.order_by(
+            '-pub_date', '-pub_order', 'title'
+        ).limit(10):
             item_author = item['author']
 
             feed.add(

@@ -18,7 +18,7 @@ Flask will now detect the encoding of incoming JSON data as one of the supported
 Upgrade
 --------
 
-Upgrade from [PyPI](https://pypi.org/projects/Flask/) with pip. Use a version identifier if you want to stay at 0.12:
+Upgrade from [PyPI](https://pypi.org/project/Flask/) with pip. Use a version identifier if you want to stay at 0.12:
 
     pip install -U Flask==0.12.3
 

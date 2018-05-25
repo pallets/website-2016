@@ -16,7 +16,7 @@ class PyPIBox extends React.Component {
   componentDidMount() {
     $.ajax({
       method: 'GET',
-      url: 'https://pypi.python.org/pypi/' + this.props.packageName + '/json',
+      url: 'https://pypi.org/pypi/' + this.props.packageName + '/json',
       crossDomain: true
     }).then((data) => {
       this.setState({

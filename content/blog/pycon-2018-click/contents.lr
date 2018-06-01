@@ -14,7 +14,7 @@ For up to four days after the talks, developers get together for sprints, workin
 
 ![Pallets open space](open-space.jpg)
 
-At the open space, I had mentioned that no one had really been maintaining Click for the past year. It turns out a *lot* of people use Click. They came motivated from the open space to contribute during the sprint. Some were new to contributing, but they all had one thing in common: they knew how Click was being used more than I did! So I took a chance and gave them all write permissions to the repository. Click started at ~250 open issues and 68 pull requests. After 2 days, it was at 140 issues and 22 pull requests. Wow! [You can see the Click maintainer team, with all these new contributors, on GitHub.](https://github.com/orgs/pallets/teams/click/members) While Click stole the show, we had great contributions to Werkzeug, Flask, and Jinja as well.
+At the open space, I had mentioned that no one had really been maintaining Click for the past year. It turns out a *lot* of people use Click. They came motivated from the open space to contribute during the sprint. Some were new to contributing, but they all had one thing in common: they knew how Click was being used more than I did! So I took a chance and gave them all write permissions to the repository. Click started at ~250 open issues and 68 pull requests. After 2 days, it was at 140 issues and 22 pull requests. Wow! With that success, I'm officially welcoming all these new maintainers to the Pallets Click team. While Click stole the show, we had great contributions to Werkzeug, Flask, and Jinja as well.
 
 ![Dinner with Pallets sprinters](sprint-dinner.jpg)
 

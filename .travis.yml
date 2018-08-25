@@ -17,7 +17,7 @@ cache: pip
 #    - $HOME/.cache/lektor/builds
 addons:
   ssh_known_hosts:
-    - flow.srv.pocoo.org
+    - 172.104.11.34
 notifications:
   webhooks:
     urls:

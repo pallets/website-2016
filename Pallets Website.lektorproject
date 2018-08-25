@@ -12,5 +12,5 @@ lektor-open-graph = 1b4
 [servers.production]
 enabled = yes
 name = Production
-target = rsync://pallets@172.104.11.34/srv/pallets-website/static
+target = rsync://pallets@172.104.11.34/srv/palletsprojects.com/static
 default = yes

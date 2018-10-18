@@ -10,7 +10,7 @@ twitter_handle: davidism
 ---
 body:
 
-It's Dangerous 1.0.0 has been released. See the [changelog](https://itsdangerous.palletsprojects.com/en/1.0.x/changes.html#version-1-0-0) for a list of changes since the last release on 2014-03-28.
+It's Dangerous 1.0.0 has been released. See the [changelog](https://itsdangerous.palletsprojects.com/en/1.0.x/changes/#version-1-0-0) for a list of changes since the last release on 2014-03-28.
 
 It's Dangerous provides secure message signing and serialization. Without the secret key used to sign a message, the content cannot be changed without invalidating the signature. This allows, for example, Flask to store information in a session cookie that is transmitted over public networks, and be sure that the data has not been tampered with when loading a subsequent request.
 

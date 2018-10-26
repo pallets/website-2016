@@ -45,7 +45,7 @@ itsdangerous also provides URL safe serializers:
 [1, 2, 3, 4]
 ```
 ---
-documentation: http://pythonhosted.org/itsdangerous/
+documentation: https://itsdangerous.palletsprojects.com/
 ---
 pypi_name: itsdangerous
 ---

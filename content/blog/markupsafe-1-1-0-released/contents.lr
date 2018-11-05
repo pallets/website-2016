@@ -10,7 +10,7 @@ twitter_handle: davidism
 ---
 body:
 
-[Changelog](https://markupsafe.palletsprojects.com/en/1.0.x/changes/)
+[Changelog](https://markupsafe.palletsprojects.com/en/1.1.x/changes/)
 
 * Dropped support for Python 2.6 and 3.3.
 * Using newer CPython APIs gave the C extension a 1.5x speedup on Python 3. Python 2 will still get the same speed as before, but you should consider upgrading if possible.

@@ -17,10 +17,8 @@ Click in three points:
 * automatic help page generation
 * supports lazy loading of subcommands at runtime
 ---
-documentation: http://click.pocoo.org/
+documentation: https://click.palletsprojects.com/
 ---
 pypi_name: click
 ---
 tagline: A package for creating beautiful command line interfaces in a composable way
----
-website: http://click.pocoo.org/

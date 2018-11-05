@@ -29,7 +29,7 @@ Markup(u'foo')
 MarkupSafe is the most popular HTML string handling library for Python
 used by many different template engines and frameworks.
 ---
-documentation: https://pypi.python.org/pypi/MarkupSafe
+documentation: https://markupsafe.palletsprojects.com/
 ---
 pypi_name: MarkupSafe
 ---

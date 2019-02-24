@@ -12,7 +12,7 @@ This is a bugfix release. [Changelog](https://markupsafe.palletsprojects.com/en/
 
 Install from [PyPI](https://pypi.org/project/MarkupSafe) with pip:
 
-    pip install -U itsdangerous
+    pip install -U MarkupSafe
 ---
 categories: releases
 ---

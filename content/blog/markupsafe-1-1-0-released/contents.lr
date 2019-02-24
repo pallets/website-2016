@@ -30,7 +30,7 @@ Full documentation has been added in place of the previous README. It is availab
 
 Install from [PyPI](https://pypi.org/project/MarkupSafe) with pip:
 
-    pip install -U itsdangerous
+    pip install -U MarkupSafe
 
 ## Donate
 

@@ -1,5 +1,7 @@
 {% extends "project-layout.html" %}
+
 {% block title %}{{ this.name }}{% endblock %}
+
 {% block project_body %}
   <div class="row">
     <div class="col-sm-9">
@@ -27,8 +29,8 @@
         {% if this.website %}
         <p><span class="fa fa-fw fa-external-link"></span> <a href="{{ this.website }}">{{ this.website.host }}</a>
         {% endif %}
-        <p><span class="fa fa-fw fa-list"></span> <a href="https://pypi.python.org/pypi/{{ this.pypi_name }}">{{ this.name }} on PyPI</a>
-        <p><span class="fa fa-fw fa-cogs"></span> <a href="https://travis-ci.org/pallets/{{ this._id }}">Status on Travis-CI</a>
+        <p><span class="fa fa-fw fa-list"></span> <a href="https://pypi.python.org/pypi/{{ this.pypi_name }}">Releases on PyPI</a>
+        <p><span class="fa fa-fw fa-cogs"></span> <a href="https://travis-ci.org/pallets/{{ this._id }}">Test status</a>
         <p><span class="fa fa-fw fa-book"></span> <a href="{{ this.documentation }}">Documentation</a>
         <div class="pypi-box" data-pypi="{{ this.pypi_name }}"></div>
       </div>

@@ -2,51 +2,27 @@ name: ItsDangerous
 ---
 body:
 
-Sometimes you just want to send some data to untrusted environments. But how to
-do this safely? The trick involves signing. Given a key only you know, you can
-cryptographically sign your data and hand it over to someone else. When you get
-the data back you can easily ensure that nobody tampered with it.
+*It's dangerous, so better sign this.*
 
-Granted, the receiver can decode the contents and look into the package, but
-they can not modify the contents unless they also have your secret key. So if
-you keep the key secret and complex, you will be fine.
+Various helpers to pass data to untrusted environments and to get it back safe and sound. Data is cryptographically signed to ensure that a token has not been tampered with.
 
-Internally itsdangerous uses HMAC and SHA1 for signing by default and bases the
-implementation on the Django signing module. It also however supports JSON Web
-Signatures (JWS). The library is BSD licensed and written by Armin Ronacher
-though most of the copyright for the design and implementation goes to Simon
-Willison and the other amazing Django people that made this library possible.
+It's possible to customize how data is serialized. Data is compressed as needed. A timestamp can be added and verified automatically while loading a token.
 
-## Example Use Cases
+```python
+from itsdangerous import URLSafeSerializer
+auth_s = URLSafeSerializer("secret key", "auth")
+token = auth_s.dumps({"id": 5, "name": "itsdangerous"})
 
-* You can serialize and sign a user ID for unsubscribing of newsletters into
-  URLs. This way you don’t need to generate one-time tokens and store them in
-  the database. Same thing with any kind of activation link for accounts and
-  similar things.
-* Signed objects can be stored in cookies or other untrusted sources which
-  means you don’t need to have sessions stored on the server, which reduces the
-  number of necessary database queries.
-* Signed information can safely do a roundtrip between server and
-  client in general which makes them useful for passing server-side state to a
-  client and then back.
+print(token)
+# eyJpZCI6NSwibmFtZSI6Iml0c2Rhbmdlcm91cyJ9.6YP6T0BaO67XP--9UzTrmurXSmg
 
-## URL Safe Serialization
-
-Often it is helpful if you can pass these trusted strings to environments where
-you only have a limited set of characters available. Because of this,
-itsdangerous also provides URL safe serializers:
-
-```pycon
->>> from itsdangerous import URLSafeSerializer
->>> s = URLSafeSerializer('secret-key')
->>> s.dumps([1, 2, 3, 4])
-'WzEsMiwzLDRd.wSPHqC0gR7VUqivlSukJ0IeTDgo'
->>> s.loads('WzEsMiwzLDRd.wSPHqC0gR7VUqivlSukJ0IeTDgo')
-[1, 2, 3, 4]
+data = auth_s.loads(token)
+print(data["name"])
+# itsdangerous
 ```
 ---
 documentation: https://itsdangerous.palletsprojects.com/
 ---
 pypi_name: itsdangerous
 ---
-tagline: cryptographically sign your data and hand it over to someone else
+tagline: Safely pass trusted data to untrusted environments and back.

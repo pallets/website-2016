@@ -2,35 +2,27 @@ name: MarkupSafe
 ---
 body:
 
-MarkupSafe implements a unicode subclass that supports HTML strings:
+MarkupSafe implements a text object that escapes characters so it is safe to use in HTML and XML. Characters that have special meanings are replaced so that they display as the actual characters. This mitigates injection attacks, meaning untrusted user input can safely be displayed on a page. Escaping is implemented in C so it is as efficient as possible.
 
 ```pycon
 >>> from markupsafe import Markup, escape
->>> escape("<script>alert(document.cookie);</script>")
+>>> # escape replaces special characters and wraps in Markup
+>>> escape('<script>alert(document.cookie);</script>')
 Markup(u'&lt;script&gt;alert(document.cookie);&lt;/script&gt;')
->>> tmpl = Markup("<em>%s</em>")
->>> tmpl % "Peter > Lustig"
-Markup(u'<em>Peter &gt; Lustig</em>')
+>>> # wrap in Markup to mark text "safe" and prevent escaping
+>>> Markup('<strong>Hello</strong>')
+Markup('<strong>hello</strong>')
+>>> escape(Markup('<strong>Hello</strong>'))
+Markup('<strong>hello</strong>')
+>>> # Markup is a text subclass (str on Python 3, unicode on Python 2)
+>>> # methods and operators escape their arguments
+>>> template = Markup("Hello <em>%s</em>")
+>>> template % '"World"'
+Markup('Hello <em>&#34;World&#34;</em>')
 ```
-
-If you want to make an object unicode that is not yet unicode but don’t
-want to lose the taint information, you can use the soft_unicode function.
-(On Python 3 you can also use `soft_str` which is a different name for the
-same function).
-
-```python
->>> from markupsafe import soft_unicode
->>> soft_unicode(42)
-u'42'
->>> soft_unicode(Markup('foo'))
-Markup(u'foo')
-```
-
-MarkupSafe is the most popular HTML string handling library for Python
-used by many different template engines and frameworks.
 ---
 documentation: https://markupsafe.palletsprojects.com/
 ---
 pypi_name: MarkupSafe
 ---
-tagline: a HTML-Markup safe string for Python
+tagline: Safely add untrusted strings to HTML/XML markup.

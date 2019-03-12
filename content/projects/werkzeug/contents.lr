@@ -2,50 +2,56 @@ name: Werkzeug
 ---
 body:
 
-Werkzeug is a WSGI utility library for Python. It's widely used and BSD licensed.
+*werkzeug* German noun: "tool". Etymology: *werk* ("work"), *zeug* ("stuff")
 
-## Werkzeug is Simple
+Werkzeug is a comprehensive [WSGI][] web application library. It began
+as a simple collection of various utilities for WSGI applications and
+has become one of the most advanced WSGI utility libraries.
+
+[Flask][] wraps Werkzeug, using it to handle the details of WSGI while
+providing more structure and patterns for defining powerful
+applications.
 
 ```python
 from werkzeug.wrappers import Request, Response
 
 @Request.application
 def application(request):
-    return Response('Hello World!')
+    return Response("Hello, World!")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     from werkzeug.serving import run_simple
-    run_simple('localhost', 4000, application)
+    run_simple("localhost", 5000, application)
 ```
 
-##And Powerful
+Werkzeug includes:
 
-Werkzeug started as a simple collection of various utilities for WSGI applications and has become one of the most advanced WSGI utility modules. It includes a powerful debugger, fully featured request and response objects, HTTP utilities to handle entity tags, cache control headers, HTTP dates, cookie handling, file uploads, a powerful URL routing system and a bunch of community contributed addon modules.
+-   An interactive debugger that allows inspecting stack traces and
+    source code in the browser with an interactive interpreter for any
+    frame in the stack.
+-   A full-featured request object with objects to interact with
+    headers, query args, form data, files, and cookies.
+-   A response object that can wrap other WSGI applications and handle
+    streaming data.
+-   A routing system for matching URLs to endpoints and generating URLs
+    for endpoints, with an extensible system for capturing variables
+    from URLs.
+-   HTTP utilities to handle entity tags, cache control, dates, user
+    agents, cookies, files, and more.
+-   A threaded WSGI server for use while developing applications locally.
+-   A test client for simulating HTTP requests during testing without
+    requiring running a server.
 
-It does Unicode and doesn't enforce a specific template engine, database adapter or anything else. It doesn't even enforce a specific way of handling requests and leaves all that up to the developer.
+Werkzeug is Unicode aware and doesn't enforce any dependencies. It is up
+to the developer to choose a template engine, database adapter, and even
+how to handle requests. It can be used to build all sorts of end user
+applications such as blogs, wikis, or bulletin boards.
 
-## In the Box
-
-* HTTP header parsing and dumping
-* Easy to use request and response objects
-* Interactive JavaScript based in-browser debugger
-* 100% WSGI 1.0 compatible
-* Supports Python 2.6, 2.7, 3.3, 3.4 and 3.5.
-* Unicode support
-* Basic session and signed cookie support
-* URI and IRI utilities with unicode awareness
-* builtin library of fixes for buggy WSGI servers and browsers
-* integrated routing system for matching URLs to endpoints and vice versa
-
-## A Strong Foundation
-
-Werkzeug is the base of frameworks such as Flask and more, as well as in
-house frameworks developed for commercial products and websites.
+[WSGI]: https://wsgi.readthedocs.io/en/latest/
+[Flask]: /p/flask
 ---
-documentation: http://werkzeug.pocoo.org/docs/
+documentation: https://werkzeug.palletsprojects.com/
 ---
 pypi_name: Werkzeug
 ---
-tagline: a WSGI utility library for Python
----
-website: http://werkzeug.pocoo.org/
+tagline: The comprehensive WSGI web application library.

@@ -6,9 +6,9 @@ body:
 
 The Pallets team is pleased to release Werkzeug 0.15.0. This represents
 over a year of work from the community and maintainers, and as such
-there is an unusually long list of changes. Some of the notable changes
-are listed below, but there are many more changes throughout the
-framework. [Read the full changelog](https://werkzeug.palletsprojects.com/en/0.15.x/changes/)
+there is an unusually long list of changes. Some of the notable ones
+are listed below, but there are many more throughout the framework.
+[Read the full changelog](https://werkzeug.palletsprojects.com/en/0.15.x/changes/)
 to understand what changes may affect your code when upgrading.
 
 * Building URLs is ~7x faster.

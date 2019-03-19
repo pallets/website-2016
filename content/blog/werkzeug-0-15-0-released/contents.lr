@@ -15,7 +15,7 @@ to understand what changes may affect your code when upgrading.
 * Redirects now use HTTP code 308 by default. This preserves the method
   and form data.
 * `int` and `float` URL converters can handle negative numbers.
-* The debugger saw a number of improvements. Python 3's chanied
+* The debugger saw a number of improvements. Python 3's chained
   exceptions are correctly displayed and logged. Frames of user code
   are highlighted to make it easier to read tracebacks.
 * The reloader is much better at detecting how to re-run itself. It

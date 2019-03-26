@@ -140,7 +140,7 @@ Comparisons:
 Use negated containment checks: for instance `foo not in bar` instead of `not
 foo in bar`
 
-For instance checks use `isinstance(a, C)` instead of `type(A) is C`, but
+For instance checks use `isinstance(a, C)` instead of `type(a) is C`, but
 try to avoid instance checks in general.  Check for features.
 
 ## Naming Conventions
@@ -155,7 +155,7 @@ try to avoid instance checks in general.  Check for features.
 Protected members are prefixed with a single underscore.  Double
 underscores are reserved for mixin classes.
 
-If a name clashes with a keyword, trailing appended a trailing underscore.
+If a name clashes with a keyword, append a trailing underscore.
 Clashes with builtins are allowed and **must not** be resolved by appending an
 underline to the variable name.  If the function needs to access a
 shadowed builtin, rebind the builtin to a different name instead.

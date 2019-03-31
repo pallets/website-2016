@@ -53,7 +53,7 @@ elsewhere or no longer being required.
 * `ProxyFix`, `LintMiddleware`, and `ProfilerMiddleware` have moved into
   `werkzeug.middleware`.
 * `securecookie` and `sessions` have been extracted to the
-  [pallets/securecookie](https://github.com/pallets/securecookie)
+  [pallets/secure-cookie](https://github.com/pallets/secure-cookie)
   repository.
 * `cache` has been extracted to the
   [pallets/cachelib](https://github.com/pallets/cachelib) repository.

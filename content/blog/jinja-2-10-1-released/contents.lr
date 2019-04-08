@@ -8,8 +8,7 @@ Jinja 2.10.1 has been released and includes a security-related fix. If
 you are using the Jinja [sandboxed environment][] you are encouraged to
 upgrade.
 
-We are currently waiting for a CVE number to be assigned and will update
-this post when it is available.
+MITRE has assigned [CVE-2019-10906][] to this issue.
 
 Thank you to [Brian Welch][] for responsibly reporting the issue, and to
 [Armin Ronacher][] for writing the fix.
@@ -37,6 +36,7 @@ the Pallets projects, please email <security@palletsprojects.com> with
 details.
 
 [sandboxed environment]: http://jinja.pocoo.org/docs/2.10/sandbox/
+[CVE-2019-10906]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10906
 [Brian Welch]: https://brianwel.ch
 [Armin Ronacher]: https://twitter.com/mitsuhiko
 [Jinja 2.8.1]: ../jinja-281-released/

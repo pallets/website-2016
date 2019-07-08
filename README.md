@@ -1,12 +1,16 @@
 # Pallets website
 
-[That one website](https://www.palletsprojects.com/). Builds automatically.
+A static site generated with [Lektor][https://www.getlektor.com]. This
+contains the blog, project descriptions, and other information about
+Pallets.
 
-[![Build Status](https://travis-ci.org/pallets/website.svg?branch=master)](https://travis-ci.org/pallets/website)
+https://palletsprojects.com/
+
+Deploys automatically: [![Build Status](https://travis-ci.org/pallets/website.svg?branch=master)](https://travis-ci.org/pallets/website)
 
 
 ## Editing Content
 
 1. `pip install lektor`
 2. `lektor server -f webpack`
-3. Visit `localhost:5000` for the editor
+3. Visit http://localhost:5000 for the editor

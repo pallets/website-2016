@@ -64,8 +64,8 @@ will warn you if it detects logging configuration for `"flask"` or
 `"flask.app"` so you can rename that configuration appropriately.
 
 For example, if your project is named `example.py` and you initialize
-your Flask app as `Flask(__name__)``, then the logger will be named
-``"example"`.
+your Flask app as `Flask(__name__)`, then the logger will be named
+`"example"`.
 
 
 Install or Upgrade
@@ -84,7 +84,7 @@ efforts to maintain the projects and grow the community. We greatly
 appreciate any support you can provide.
 [**Click here to donate.**](/donate)
 ---
-categories: security, releases
+categories: releases
 ---
 pub_date: 2019-07-04
 ---

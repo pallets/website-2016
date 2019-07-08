@@ -4,8 +4,6 @@ name: Flask
 ---
 tagline: a flexible and popular web development framework
 ---
-website: http://flask.pocoo.org/
----
 documentation: https://flask.palletsprojects.com/
 ---
 pypi_name: Flask

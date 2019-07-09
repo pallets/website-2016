@@ -1,6 +1,6 @@
 # Pallets website
 
-A static site generated with [Lektor][https://www.getlektor.com]. This
+A static site generated with [Lektor](https://www.getlektor.com). This
 contains the blog, project descriptions, and other information about
 Pallets.
 

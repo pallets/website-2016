@@ -42,10 +42,8 @@ versions from 2.5 to current versions including Python 3.
 * Template designer helpers. Jinja2 ships with a wide range of useful little helpers that help solving common tasks in templates such as breaking up sequences of items into multiple columns and more.
 
 ---
-documentation: http://jinja.pocoo.org/docs/
+documentation: https://jinja.palletsprojects.com/
 ---
 pypi_name: Jinja2
 ---
 tagline: a full featured template engine for Python
----
-website: http://jinja.pocoo.org/

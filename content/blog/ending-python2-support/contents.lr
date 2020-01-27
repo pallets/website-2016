@@ -39,7 +39,7 @@ for only 3.6+:
 * Click 8.0
 * Jinja 3.0
 * ItsDangerous 2.0
-* MarkupSafe 2.0.
+* MarkupSafe 2.0
 
 Thanks to the `python_requires` package metadata, Python 2.7 and
 3.5 users with a modern pip version will install the last supported

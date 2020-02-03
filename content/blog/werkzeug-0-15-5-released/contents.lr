@@ -20,7 +20,7 @@ Security fix for `SharedDataMiddleware` on Windows
 
 Prior to 0.15.5, it was possible for a third party to potentially access
 arbitrary files when the application used `SharedDataMiddleware` on
-Windows.
+Windows. This issue was assigned [CVE-2019-14322](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14322).
 
 Due to the way Python's `os.path.join()` function works on Windows, a
 path segment with a drive name will change the drive of the final path.

@@ -4,12 +4,12 @@ import posixpath
 import uuid
 from datetime import datetime
 
+from feedgen.feed import FeedGenerator
+from lektor._compat import text_type
 from lektor.build_programs import BuildProgram
 from lektor.context import get_ctx, url_to
 from lektor.pluginsystem import Plugin
 from lektor.sourceobj import VirtualSourceObject
-from werkzeug._compat import text_type
-from werkzeug.contrib.atom import AtomFeed
 
 FEED_NAME = 'feed.xml'
 
@@ -44,32 +44,31 @@ class AtomFeedBuilderProgram(BuildProgram):
         feed_source = self.source
         page = feed_source.parent
 
-        feed = AtomFeed(
-            title=page.record_label + u' — Pallets Project',
-            feed_url=url_to(feed_source, external=True),
-            url=url_to('/blog', external=True),
-            id=get_id(ctx.env.project.id)
-        )
+        fg = FeedGenerator()
+        fg.id(get_id(ctx.env.project.id))
+        fg.title(page.record_label + u" — Pallets Project")
+        fg.link(href=url_to("/blog", external=True))
+        fg.link(href=url_to(feed_source, external=True), rel="self")
 
         for item in page.children.order_by(
             '-pub_date', '-pub_order', 'title'
         ).limit(10):
-            item_author = item['author']
-
-            feed.add(
-                item['title'],
-                text_type(item['body']),
-                xml_base=url_to(item, external=True),
-                url=url_to(item, external=True),
-                content_type='html',
-                id=get_id(u'%s/%s' % (
-                    ctx.env.project.id,
-                    item['_path'].encode('utf-8'))),
-                author=item_author,
-                updated=datetime(*item['pub_date'].timetuple()[:3]))
+            fe = fg.add_entry()
+            fe.title(item["title"])
+            fe.content(text_type(item["body"]), type="html")
+            fe.link(href=url_to(item, external=True))
+            fe.id(
+                get_id(
+                    u"{}/{}".format(ctx.env.project.id, item["_path"].encode("utf-8"))
+                )
+            )
+            fe.author(name=item["author"])
+            updated = datetime(*item["pub_date"].timetuple()[:3])
+            updated = updated.isoformat() + "Z" if not updated.tzinfo else ""
+            fe.updated(updated)
 
         with artifact.open('wb') as f:
-            f.write(feed.to_string().encode('utf-8'))
+            f.write(fg.atom_str(pretty=True))
 
 
 class LektorBlogFeedPlugin(Plugin):

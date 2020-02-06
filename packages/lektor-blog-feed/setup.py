@@ -7,7 +7,7 @@ setup(
     author_email='armin@ronacher.eu',
     license='MIT',
     py_modules=['lektor_blog_feed'],
-    install_requires=['MarkupSafe'],
+    install_requires=['feedgen', 'MarkupSafe'],
     entry_points={
         'lektor.plugins': [
             'blog-feed = lektor_blog_feed:LektorBlogFeedPlugin',

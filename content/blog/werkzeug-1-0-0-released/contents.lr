@@ -13,7 +13,7 @@ body:
 The Pallets team is pleased to release Werkzeug 1.0. Werkzeug is the
 low-level WSGI and HTTP toolkit that powers Flask. It's been almost 13
 years since the first commit, and this milestone for the project brings
-many fixes and changes. [Read the full changelog](https://werkzeug.palletsprojects.com/en/0.15.x/changes/)
+many fixes and changes. [Read the full changelog](https://werkzeug.palletsprojects.com/en/1.0.x/changes/#version-1-0-0)
 to understand what may affect your code when upgrading.
 
 -   Drop support for Python 3.4. This will be the last version to

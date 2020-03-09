@@ -19,7 +19,7 @@ Due to the length of time since the last release, there are a significant number
 * The `CliRunner` used for testing separates stdout and stderr.
 * New `DateTime` and `FloatRange` parameter types.
 * Flags to mark a parameter as hidden or deprecated.
-* Numerouse improvements and fixes to i/o, help, parameters, and testing.
+* Numerous improvements and fixes to i/o, help, parameters, and testing.
 
 ## Read the Docs
 

@@ -1,3 +1,7 @@
+*********************HEY FOLKS , WELCOME HERE********************* 
+
+
+
 # Pallets website
 
 A static site generated with [Lektor](https://www.getlektor.com). This

@@ -9,8 +9,8 @@ https://palletsprojects.com/
 Deploys automatically: [![Build Status](https://travis-ci.org/pallets/website.svg?branch=master)](https://travis-ci.org/pallets/website)
 
 
-## Editing Content
+## Editing Content Are As Follows :
 
 1. `pip install lektor`
 2. `lektor server -f webpack`
-3. Visit http://localhost:5000 for the editor
+3. Visit http://localhost:5000 for the editor.

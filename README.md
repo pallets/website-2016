@@ -14,12 +14,12 @@ Deploys automatically: [![Build Status](https://travis-ci.org/pallets/website.sv
 ## projects
 https://palletsprojects.com/p/
 
-Click- https://palletsprojects.com/p/click/
-Flask- https://palletsprojects.com/p/flask/
-ItsDangerous- https://palletsprojects.com/p/itsdangerous/
-Jinja- https://palletsprojects.com/p/jinja/
-Markupsafe- https://palletsprojects.com/p/markupsafe/
-Werkzeug- https://palletsprojects.com/p/werkzeug/
+Click- https://palletsprojects.com/p/click/ <br>
+Flask- https://palletsprojects.com/p/flask/ <br>
+ItsDangerous- https://palletsprojects.com/p/itsdangerous/ <br>
+Jinja- https://palletsprojects.com/p/jinja/ <br>
+Markupsafe- https://palletsprojects.com/p/markupsafe/ <br>
+Werkzeug- https://palletsprojects.com/p/werkzeug/ <br>
 
 
 ## Editing Content

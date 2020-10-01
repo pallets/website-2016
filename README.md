@@ -1,4 +1,4 @@
-# Pallets website
+# Pallets : Popular for Python Project
 
 A static site generated with [Lektor](https://www.getlektor.com). This
 contains the blog, project descriptions, and other information about

@@ -14,3 +14,5 @@ Deploys automatically: [![Build Status](https://travis-ci.org/pallets/website.sv
 1. `pip install lektor`
 2. `lektor server -f webpack`
 3. Visit http://localhost:5000 for the editor
+Thankyou for choosing my website
+

@@ -1,0 +1,20 @@
+name: Joshua Bronson
+---
+role: Project Maintainer
+---
+location: New York, NY
+---
+twitter: jabronso
+---
+github: jab
+---
+description:
+
+Josh Bronson has been a Pallets maintainer since 2019
+and a contributor since 2011.
+He has also contributed to CPython
+and numerous other Python projects
+including Flask-Caching, Flask-Rebar,
+Trio, urllib3, WSGI-Kerberos, and lxml.
+He is also the author of [bidict](https://bidict.rtfd.io),
+Python's bidirectional mapping library.

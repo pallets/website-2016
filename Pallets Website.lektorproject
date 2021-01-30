@@ -4,9 +4,9 @@ url = https://palletsprojects.com/
 url_style = absolute
 
 [packages]
-lektor-webpack-support = 0.3
-lektor-markdown-highlighter = 0.1
-lektor-markdown-header-anchors = 0.1
+lektor-webpack-support = 0.5
+lektor-markdown-highlighter = 0.3.1
+lektor-markdown-header-anchors = 0.3.1
 lektor-open-graph = 1b4
 
 [servers.production]

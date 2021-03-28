@@ -6,7 +6,7 @@ Pallets.
 
 https://palletsprojects.com/
 
-Deploys automatically: [![Build Status](https://travis-ci.org/pallets/website.svg?branch=master)](https://travis-ci.org/pallets/website)
+Deploys automatically: [![CI/CD Status](https://github.com/pallets/website/workflows/cicd/badge.svg)](https://github.com/pallets/website/actions/workflows/cicd.yaml)
 
 
 ## Editing Content

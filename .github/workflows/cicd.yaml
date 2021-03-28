@@ -1,0 +1,49 @@
+name: cicd
+on:
+  schedule:
+    - cron: "0 11 * * 5"
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: update pip
+        run: |
+          pip install -U wheel
+          pip install -U setuptools
+          python -m pip install -U pip
+          python -m pip list
+      - name: cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          # cache key unique enough? usually includes setup.py, requirements.txt, etc.
+          key: pip|${{ hashFiles('Pallets\ Website.lektorproject') }}
+      - name: cache npm
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          # key: npm|${{ hashFiles('webpack/package-lock.json') }}
+          key: npm|${{ hashFiles('webpack/package.json') }}
+      - name: debug cache npm
+        run: npm cache verify
+      - name: install Lektor
+        run: pip install Lektor
+      - name: lektor build
+        run: lektor build -f webpack -O ./build
+      - name: netlify deploy
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=build

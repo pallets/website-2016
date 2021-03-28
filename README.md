@@ -6,7 +6,8 @@ Pallets.
 
 https://palletsprojects.com/
 
-Deploys automatically: [![Build Status](https://travis-ci.org/pallets/website.svg?branch=master)](https://travis-ci.org/pallets/website)
+Deploys automatically:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/97e450c1-6c98-4b1a-8aaa-3328c8ab0c28/deploy-status)](https://app.netlify.com/sites/pallets/deploys)
 
 
 ## Editing Content

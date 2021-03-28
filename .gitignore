@@ -1,3 +1,4 @@
+/build
 webpack/node_modules
 assets/static/
 packages/*/*.egg-info

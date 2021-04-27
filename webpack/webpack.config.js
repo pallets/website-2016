@@ -1,50 +1,46 @@
-var webpack = require('webpack');
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-
-var options = {
-  entry: {
-    'app': './js/app.jsx',
-    'styles': './scss/main.scss'
-  },
+module.exports = {
+  mode: 'production',
+  entry: './js/app.js',
   output: {
     path: path.dirname(__dirname) + '/assets/static',
-    filename: '[name].js'
-  },
-  devtool: '#cheap-module-source-map',
-  resolve: {
-    extensions: ['.jsx', '.js']
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/env', {targets: 'defaults'}]
+            ]
+          }
+        }
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader!sass-loader'})
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {postcssOptions: {plugins: ['postcss-preset-env']}}
+          },
+          'sass-loader'
+        ]
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})
-      },
-      {
-        test: /\.(woff2?|ttf|eot|svg|png)(\?.*?)?$/,
-        loader: 'file-loader'
+        test: /\.(eot|otf|svg|ttf|woff2?)$/,
+        type: 'asset/resource',
+        generator: {filename: '[name][ext]'}
       }
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
-    new ExtractTextPlugin({filename: 'styles.css', allChunks: true})
+    new MiniCssExtractPlugin()
   ]
-};
-
-module.exports = options;
+}

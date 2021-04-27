@@ -1,0 +1,51 @@
+title: New Flask, Jinja2, Click, Werkzeug, and itsdangerous major release candidates
+---
+categories: releases
+---
+pub_date: 2021-04-29
+---
+author: Philip Jones
+---
+twitter_handle: pdgjones
+---
+body:
+
+The Pallets team is pleased to announce that release candidates are
+now available for [Flask
+2.0](https://flask.palletsprojects.com/en/master/changes#version-2-0-0),
+[Jinja2
+3.0](https://jinja.palletsprojects.com/en/master/changes/#version-3-0-0),
+[Click
+8.0](https://click.palletsprojects.com/en/master/changes/#version-8-0),
+[Werkzeug
+2.0](https://werkzeug.palletsprojects.com/en/master/changes/#version-2-0-0),
+and [ItsDangerous
+2.0](https://itsdangerous.palletsprojects.com/en/master/changes/#version-2-0-0),
+help us by testing these pre-releases and reporting back any
+errors. To install these pre-releases with pip use the `--pre` flag,
+e.g.
+
+    pip install --pre flask
+
+These new major versions all drop support for Python 2, and 3.5
+requiring Python 3.6 as the minimum supported version.
+
+
+## Release highlights
+
+These are a few highlights, see the changelogs linked above for the
+full release details.
+
+-   Flask, Werkzeug, and Click gain type hints
+-   Flask gains limited async/await support
+-   Flask supports nested blueprints
+-   Flask introduces short form route decorators, `@app.get` alongside
+    `@app.route`
+-   Click will now prompt for values where they are omitted.
+-   Werkzeug's multipart parsing performance increases by a factor of 15
+
+
+## Release date
+
+The Pallets team is aiming to release on or before PyCon 2021, i.e. a
+target release date of the 11th of May 2021.

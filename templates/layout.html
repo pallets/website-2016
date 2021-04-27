@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ open_graph.render_tags(this) }}
 <link rel="shortcut icon" href="{{ '/favicon.png'|url }}">
-<link rel="stylesheet" href="{{ '/static/styles.css'|asseturl }}">
+<link rel="stylesheet" href="{{ '/static/main.css'|asseturl }}">
 <link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
-<script type="text/javascript" src="{{ "/static/app.js"|asseturl }}"></script>
+<script type="text/javascript" src="{{ "/static/main.js"|asseturl }}"></script>
 <title>{% block title %}Hello{% endblock %} | The Pallets Projects</title>
 {%- endblock %}
 <body class="{% block bodyclass %}default{% endblock %}">

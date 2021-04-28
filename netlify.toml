@@ -1,0 +1,3 @@
+[build]
+  publish = "dist"
+  command = "pip install -r requirements.txt && export PYTHONPATH=$(pwd) && lektor build -f webpack -O dist"

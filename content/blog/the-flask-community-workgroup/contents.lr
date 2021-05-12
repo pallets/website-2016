@@ -1,0 +1,37 @@
+title: The Flask Community Workgroup
+---
+author: Abdur-Rahmaan Janhangeer
+---
+body:
+
+Recently there has been some activity in the Flask community. Release 2.0.0 for Flask has been marked as the occasion to announce the creation of the Flask Community Workgroup. Since the organisation of FlaskCon last year, things have been brewing. Instead of several octopus initiatives, it was thought that a dedicated workgroup might better take care of the community.
+
+The work group labelled as the Flask Community Workgroup works on 3 main aspects viz:
+
+- Ecosystem
+- Events
+- Education 
+
+The website https://flaskcwg.github.io/ hosted on github pages is the home of the project. The main page details the why of the initiative. 
+
+## Ecosystem
+
+The WG ensures collective ownership of unmaintained plugins and projects at: github.com/flaskcwg. You can apply [here](https://flaskcwg.github.io/takeover.html)
+
+## Events
+
+The WG provides support and resources and might be a good funding approach point if you want to organise events
+
+## Education
+
+The WG aims at producing, promoting and recommending the best quality materials for the Flask community
+
+It's the fickle that's just been lit with the help of [those people](https://flaskcwg.github.io/members.html)
+
+## This year
+
+The flaskcwg completed the complete spanish translations of the docs as well as setting up the guiding rails for an even better FlaskCon this year. There is simply a lot of things buzzing around and brewing! If your level of Flask is great, you can apply [here](https://flaskcwg.github.io/join.html) for code maintainance, help with translations or events or all ^^.
+---
+pub_date: 2021-05-12
+---
+twitter_handle: osdotsystem

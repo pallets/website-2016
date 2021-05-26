@@ -2,15 +2,40 @@ title: Contact
 ---
 body:
 
-The Pallets Projects are Open Source, and all licensed under the [three
-clause BSD license](../license/).  For detailed copyright and license
-information, see [License & Copyright](../license/).
+There are a number of ways to get in touch with maintainers and the
+community, depending on your needs and preferences.
 
-## Imprint
+Please follow our [Code of Conduct](../governance/code-of-conduct) when
+participating in the Pallets community.
 
-Armin Ronacher  
-Khünburg, 86  
-9620 Hermagor; Austria
+## Chat
 
-VAT number / UID: AT U68598289  
-E-Mail: [armin@ronacher.eu](mailto:armin@ronacher.eu)
+Join us on our Discord server by using this invite link:
+[https://discord.gg/pallets](https://discord.gg/pallets).
+There you can ask questions about your code, chat about Python and
+projects, and also get help contributing to the Pallets libraries.
+
+We encourage everyone to use Discord if possible. If you prefer to use
+IRC, you can join [#pallets on libera.chat](ircs://irc.libera.chat:6697/pallets).
+We use a bot to link this channel to the #questions channel on Discord,
+so you might see weird formatting or usernames in some cases.
+
+## Mailing List
+
+The mailing list is a good place to ask questions or have discussions
+with the community that are larger or longer term than chat.
+
+- <flask@python.org>
+- Subscribe: https://mail.python.org/mailman/listinfo/flask
+- Archives: https://mail.python.org/pipermail/flask/
+
+## Pallets Email
+
+To contact the Pallets team privately, use the following addresses.
+
+- <contact@palletsprojects.com> for general inquiries. We cannot help with
+  code or surveys.
+- <security@palletsprojects.com> to report a security issue you have
+  discovered. Please do not open a public issue on the issue tracker.
+- <report@palletsprojects.com> to report Code of Conduct issues or other
+  concerns with community interaction.

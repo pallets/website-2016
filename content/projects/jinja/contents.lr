@@ -33,7 +33,7 @@ versions from 2.5 to current versions including Python 3.
 ## Wide Range of Features
 
 * Sandboxed execution mode. Every aspect of the template execution is monitored and explicitly whitelisted or blacklisted, whatever is preferred. This makes it possible to execute untrusted templates.
-* powerful automatic HTML escaping system for cross site scripting prevention.
+* Powerful automatic HTML escaping system for cross site scripting prevention.
 * Template inheritance makes it possible to use the same or a similar layout for all templates.
 * High performance with just in time compilation to Python bytecode. Jinja2 will translate your template sources on first load into Python bytecode for best runtime performance.
 * Optional ahead-of-time compilation

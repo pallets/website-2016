@@ -5,7 +5,6 @@ import uuid
 from datetime import datetime
 
 from feedgen.feed import FeedGenerator
-from lektor._compat import text_type
 from lektor.build_programs import BuildProgram
 from lektor.context import get_ctx, url_to
 from lektor.pluginsystem import Plugin
@@ -29,8 +28,7 @@ class BlogFeedSource(VirtualSourceObject):
 
 
 def get_id(s):
-    s = text_type(s).encode('utf8')
-    return uuid.UUID(bytes=hashlib.md5(s).digest(), version=3).urn
+    return uuid.UUID(bytes=hashlib.md5(s.encode('utf8')).digest(), version=3).urn
 
 
 class AtomFeedBuilderProgram(BuildProgram):
@@ -55,7 +53,7 @@ class AtomFeedBuilderProgram(BuildProgram):
         ).limit(10):
             fe = fg.add_entry()
             fe.title(item["title"])
-            fe.content(text_type(item["body"]), type="html")
+            fe.content(str(item["body"]), type="html")
             fe.link(href=url_to(item, external=True))
             fe.id(
                 get_id(
@@ -72,7 +70,7 @@ class AtomFeedBuilderProgram(BuildProgram):
 
 
 class LektorBlogFeedPlugin(Plugin):
-    name = u'Lektor Blog Feeds'
+    name = 'Lektor Blog Feeds'
 
     def has_blog_feed(self, node):
         path = getattr(node, 'path', node)

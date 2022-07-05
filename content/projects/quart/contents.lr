@@ -28,7 +28,8 @@ community that make adding new functionality easy.
 
 ```python
 # save this as app.py
-from quart import Quart, escape, request
+from quart import Quart, request
+from markupsafe import escape
 
 app = Quart(__name__)
 

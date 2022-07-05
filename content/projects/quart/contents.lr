@@ -13,7 +13,7 @@ body:
 Quart is a lightweight [ASGI][] web application framework. It is a
 reimplementation of [Flask][] using async/await. As with Flask Quart
 is designed to make getting started quick and easy, with the ability
-to scale up to complex applications. Quart is build on [Werkzeug][]
+to scale up to complex applications. Quart is built on [Werkzeug][]
 and uses [Jinja][] for templating.
 
 Quart offers suggestions, but doesn't enforce any dependencies or

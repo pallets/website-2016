@@ -4,7 +4,8 @@ title: Welcome to the Pallets Projects!
 ---
 body:
 
-The Pallets Projects are a collection of Python web development libraries that
-were independently developed by Armin Ronacher and later used as the basis of
-the Flask microframework.  Today the Pallets Projects are a community-driven
-organization with the goal to maintain and improve those libraries.
+The Pallets Projects are a collection of Python web development
+libraries that are associated with the Flask microframework as
+originally developed by Armin Ronacher. Today the Pallets Projects are
+a community-driven organization with the goal to maintain and improve
+these libraries.

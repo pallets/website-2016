@@ -1,0 +1,45 @@
+_model: project
+---
+name: Quart
+---
+tagline: an async reimplementation of flask
+---
+documentation: https://quart.palletsprojects.com/
+---
+pypi_name: Quart
+---
+body:
+
+Quart is a lightweight [ASGI][] web application framework. It is a
+reimplementation of [Flask][] using async/await. As with Flask Quart
+is designed to make getting started quick and easy, with the ability
+to scale up to complex applications. Quart is built on [Werkzeug][]
+and uses [Jinja][] for templating.
+
+Quart offers suggestions, but doesn't enforce any dependencies or
+project layout. It is up to the developer to choose the tools and
+libraries they want to use. There are many extensions provided by the
+community that make adding new functionality easy.
+
+[ASGI]: https://asgi.readthedocs.io
+[Flask]: /p/flask/
+[Werkzeug]: /p/werkzeug
+[Jinja]: /p/jinja
+
+```python
+# save this as app.py
+from quart import Quart, request
+from markupsafe import escape
+
+app = Quart(__name__)
+
+@app.get("/")
+async def hello():
+    name = request.args.get("name", "World")
+    return f"Hello, {escape(name)}!"
+```
+
+```text
+$ quart run
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```

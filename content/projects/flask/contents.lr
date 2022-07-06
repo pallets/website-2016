@@ -27,7 +27,8 @@ community that make adding new functionality easy.
 
 ```python
 # save this as app.py
-from flask import Flask, escape, request
+from flask import Flask, request
+from markupsafe import escape
 
 app = Flask(__name__)
 
